@@ -11,7 +11,6 @@ M.colors = {
 	red = "#EE1B1B",
 	white = "#FFFFFF",
 	green = "#71f4ae",
-	green2 = "#B3F9D4",
 	yellow = "#F5DD73",
 	beige = "#d3b987",
 	pink = "#FF99C9",

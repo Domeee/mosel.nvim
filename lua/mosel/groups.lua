@@ -11,11 +11,10 @@ M.groups = {
 	CursorLine = { bg = c.bg3 }, -- screen-line at the cursor, when 'cursorline' is set.
 	CursorLineNr = { fg = c.blue, gui = "bold" }, -- CursorLineNr Like LineNr when 'cursorline' is set and 'cursorlineopt'" contains "number" or is "both", for the cursor line.
 	Directory = { fg = c.blue2 }, -- directory names (and other special names in listings)
-	-- TODO
-	-- DiffAdd = { bg = c.diff.add }, -- diff mode: Added line |diff.txt|
-	-- DiffChange = { bg = c.diff.change }, -- diff mode: Changed line |diff.txt|
-	-- DiffDelete = { bg = c.diff.delete }, -- diff mode: Deleted line |diff.txt|
-	-- DiffText = { bg = c.diff.text }, -- diff mode: Changed text within a changed line |diff.txt|
+	DiffAdd = { fg = c.green }, -- diff mode: Added line |diff.txt|
+	DiffChange = { fg = c.yellow }, -- diff mode: Changed line |diff.txt|
+	DiffDelete = { fg = c.red }, -- diff mode: Deleted line |diff.txt|
+	DiffText = { fg = c.yellow }, -- diff mode: Changed text within a changed line |diff.txt|
 	EndOfBuffer = { fg = c.bg3 }, -- filler lines (~) after the end of the buffer. By default, this is highlighted like |hl-NonText|.
 	ErrorMsg = { fg = c.white, bg = c.red }, -- error messages on the command line
 	VertSplit = { fg = c.bg, bg = c.bg }, -- the column separating vertically split windows
@@ -119,6 +118,11 @@ M.groups = {
 	DiagnosticUnderlineWarn = { gui = "underline", sp = c.orange2 }, -- Used to underline "Warning" diagnostics
 	DiagnosticUnderlineInfo = { gui = "underline", sp = c.green }, -- Used to underline "Information" diagnostics
 	DiagnosticUnderlineHint = { gui = "underline", sp = c.white }, -- Used to underline "Hint" diagnostics
+
+	-- Statusline
+	diffAdded = { fg = c.green },
+	diffRemoved = { fg = c.red },
+	diffChanged = { fg = c.yellow },
 }
 
 return M
