@@ -22,7 +22,7 @@ M.groups = {
 	IncSearch = { fg = c.white, gui = "bold,underline" }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
 	Substitute = { fg = c.white, gui = "bold,underline" }, --	|:substitute| replacement text highlighting
 	LineNr = { fg = c.fg2 }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
-	MatchParen = { fg = c.pink, gui = "bold" }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
+	MatchParen = { fg = c.green, gui = "bold" }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
 	ModeMsg = { fg = c.fg2, gui = "bold" }, -- 'showmode' message (e.g., "-- INSERT --")
 	MsgArea = { fg = c.fg2, gui = "bold" }, -- Area for messages and cmdline
 	MoreMsg = { fg = c.fg }, --|more-prompt|
@@ -97,6 +97,7 @@ M.groups = {
 	TSPunctDelimiter = { fg = c.blue2 },
 	TSConstructor = { fg = c.white },
 	TSLabel = { fg = c.blue },
+	TSFloat = { c.pink },
 
 	tsxTSConstructor = { fg = c.white },
 
