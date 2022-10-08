@@ -28,8 +28,8 @@ M.groups = {
   MoreMsg = { fg = c.fg }, --|more-prompt|
   NonText = { fg = c.bg3 }, --'@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
   Normal = { fg = c.fg, bg = c.bg }, -- normal text
-  NormalFloat = { fg = c.fg, bg = c.bg2 }, --	Normal text in floating windows.
   NormalNC = { fg = c.fg, bg = c.bg2 }, -- normal text in non-current windows
+  NormalFloat = { fg = c.fg, bg = c.bg4 }, --	Normal text in floating windows.
   Pmenu = { fg = c.fg, bg = c.bg3 }, --Popup menu: normal item.
   PmenuSel = { fg = c.bg, bg = c.pink, gui = "bold" }, -- Popup menu: selected item.
   PmenuSbar = { bg = c.fg2 }, -- Popup menu: scrollbar.
