@@ -101,6 +101,7 @@ M.groups = {
   ["@float"] = { c.pink },
 
   ["@constructor.tsx"] = { fg = c.white },
+  ["@tag.delimiter.tsx"] = { fg = c.fg },
 
   ["@symbol.elixir"] = { fg = c.blue2 },
   ["@float.elixir"] = { fg = c.pink },
