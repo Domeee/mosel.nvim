@@ -100,10 +100,10 @@ M.groups = {
   ["@label"] = { fg = c.blue },
   ["@float"] = { c.pink },
 
-  tsxTSConstructor = { fg = c.white },
+  ["@constructor.tsx"] = { fg = c.white },
 
-  elixirTSSymbol = { fg = c.blue2 },
-  elixirTSFloat = { fg = c.pink },
+  ["@symbol.elixir"] = { fg = c.blue2 },
+  ["@float.elixir"] = { fg = c.pink },
 
   markdownHeadingDelimiter = { fg = c.blue2, gui = "bold" },
   markdownLinkText = { fg = c.blue2, gui = "underline" },
