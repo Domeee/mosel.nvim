@@ -91,13 +91,14 @@ M.groups = {
   Error = { bg = c.red, fg = c.white, gui = "bold" }, -- (preferred) any erroneous construct
   Todo = { bg = c.pink, fg = c.bg, gui = "bold" }, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
 
-  TSVariable = { fg = c.blue },
-  TSProperty = { fg = c.blue2 },
-  TSField = { fg = c.blue2 },
-  TSPunctDelimiter = { fg = c.blue2 },
-  TSConstructor = { fg = c.white },
-  TSLabel = { fg = c.blue },
-  TSFloat = { c.pink },
+  -- https://neovim.io/doc/user/treesitter.html#treesitter-highlight-groups
+  ["@variable"] = { fg = c.blue },
+  ["@property"] = { fg = c.blue2 },
+  ["@field"] = { fg = c.blue2 },
+  ["@punctuation.delimiter"] = { fg = c.blue2 },
+  ["@constructor"] = { fg = c.white },
+  ["@label"] = { fg = c.blue },
+  ["@float"] = { c.pink },
 
   tsxTSConstructor = { fg = c.white },
 
