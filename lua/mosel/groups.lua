@@ -99,6 +99,7 @@ M.groups = {
   ["@constructor"] = { fg = c.white },
   ["@label"] = { fg = c.blue },
   ["@float"] = { c.pink },
+  ["@text.note"] = { bg = c.pink, fg = c.bg, gui = "bold" },
 
   ["@constructor.tsx"] = { fg = c.white },
   ["@tag.delimiter.tsx"] = { fg = c.fg },
