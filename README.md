@@ -31,3 +31,4 @@ The colorscheme supports the following languages, features and plugins:
 ### Limitations
 
 - `termguicolors` required
+- Neovim >= `v0.8.0`
