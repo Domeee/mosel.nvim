@@ -107,10 +107,10 @@ M.groups = {
   ["@symbol.elixir"] = { fg = c.blue2 },
   ["@float.elixir"] = { fg = c.pink },
 
-  markdownHeadingDelimiter = { fg = c.blue2, gui = "bold" },
-  markdownLinkText = { fg = c.blue2, gui = "underline" },
-  markdownCode = { fg = c.beige },
-  markdownCodeDelimiter = { fg = c.blue2, gui = "italic" },
+  -- code
+  ["@text.literal.markdown_inline"] = { fg = c.beige },
+
+  ["@text.strong.markdown_inline"] = { fg = c.white, gui = "bold" },
 
   htmlBold = { fg = c.white, gui = "bold" },
 
