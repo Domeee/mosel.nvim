@@ -26,6 +26,7 @@ The colorscheme supports the following languages, features and plugins:
 - Neovim LSP
 - Customizations for `TypeScript React`, `Elixir`, `Markdown`
 - Lualine
+- nvim-cmp
 - Different colors for active and inactive buffers
 
 ### Limitations

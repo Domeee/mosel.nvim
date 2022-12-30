@@ -29,8 +29,8 @@ M.groups = {
   NonText = { fg = c.bg3 }, --'@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
   Normal = { fg = c.fg, bg = c.bg }, -- normal text
   NormalNC = { fg = c.fg, bg = c.bg2 }, -- normal text in non-current windows
-  NormalFloat = { fg = c.fg, bg = c.bg4 }, --	Normal text in floating windows.
-  Pmenu = { fg = c.fg, bg = c.bg3 }, --Popup menu: normal item.
+  NormalFloat = { fg = c.white, bg = c.bg4 }, --	Normal text in floating windows.
+  Pmenu = { fg = c.white, bg = c.bg3 }, --Popup menu: normal item.
   PmenuSel = { fg = c.bg, bg = c.pink, gui = "bold" }, -- Popup menu: selected item.
   PmenuSbar = { bg = c.fg2 }, -- Popup menu: scrollbar.
   PmenuThumb = { bg = c.fg }, -- Popup menu: Thumb of the scrollbar.
@@ -114,10 +114,11 @@ M.groups = {
 
   htmlBold = { fg = c.white, gui = "bold" },
 
-  DiagnosticError = { fg = c.red }, -- Used as the base highlight group. Other Diagnostic highlights link to this by default
-  DiagnosticWarn = { fg = c.orange }, -- Used as the base highlight group. Other Diagnostic highlights link to this by default
-  DiagnosticInfo = { fg = c.green }, -- Used as the base highlight group. Other Diagnostic highlights link to this by default
-  DiagnosticHint = { fg = c.white }, -- Used as the base highlight group. Other Diagnostic highlights link to this by default
+  -- Used as the base highlight group. Other Diagnostic highlights link to this by default
+  DiagnosticError = { fg = c.red },
+  DiagnosticWarn = { fg = c.orange },
+  DiagnosticInfo = { fg = c.green },
+  DiagnosticHint = { fg = c.white },
 
   DiagnosticUnderlineError = { gui = "underline", sp = c.red }, -- Used to underline "Error" diagnostics
   DiagnosticUnderlineWarn = { gui = "underline", sp = c.orange2 }, -- Used to underline "Warning" diagnostics
@@ -128,6 +129,37 @@ M.groups = {
   diffAdded = { fg = c.green },
   diffRemoved = { fg = c.red },
   diffChanged = { fg = c.yellow },
+
+  -- nvim-cmp
+  CmpItemMenu = { fg = c.fg },
+  CmpItemAbbrMatch = { fg = c.white, gui = "underline" },
+  CmpItemAbbrMatchFuzzy = { fg = c.white, gui = "underline" },
+  CmpItemKindKeyword = { fg = c.fg },
+  CmpItemKindFile = { fg = c.white },
+  CmpItemKindFolder = { fg = c.fg },
+  CmpItemKindOperator = { fg = c.white },
+  CmpItemKindUnit = { fg = c.fg },
+  CmpItemAbbrDeprecated = { fg = c.fg, gui = "strikethrough" },
+  CmpItemKindVariable = { fg = c.blue },
+  CmpItemKindField = { fg = c.blue },
+  CmpItemKindTypeParameter = { fg = c.blue },
+  CmpItemKindProperty = { fg = c.blue2 },
+  CmpItemKindText = { fg = c.beige },
+  CmpItemKindInterface = { fg = c.white, gui = "italic" },
+  CmpItemKindFunction = { fg = c.blue2 },
+  CmpItemKindConstructor = { fg = c.blue2 },
+  CmpItemKindMethod = { fg = c.blue2 },
+  CmpItemKindConstant = { fg = c.pink },
+  CmpItemKindClass = { fg = c.white },
+  CmpItemKindEvent = { fg = c.white },
+  CmpItemKindModule = { fg = c.white },
+  CmpItemKindStruct = { fg = c.white },
+  CmpItemKindEnum = { fg = c.pink },
+  CmpItemKindEnumMember = { fg = c.pink },
+  CmpItemKindSnippet = { fg = c.green },
+  CmpItemKindValue = { fg = c.white },
+  CmpItemKindColor = { fg = c.pink },
+  CmpItemKindReference = { fg = c.white },
 }
 
 return M
