@@ -1,16 +1,39 @@
+local create_autocmd = vim.api.nvim_create_autocmd
+local opt = vim.opt
+
 local M = {}
 
 function M.highlight(group, table)
-	-- group: Statement
-	-- table: { bg = "Black", fg = "LightBlue", gui = "bold, italic"}
+  vim.api.nvim_set_hl(0, group, table)
+end
 
-	local fg = table.fg and table.fg or "NONE"
-	local bg = table.bg and table.bg or "NONE"
-	local gui = table.gui and table.gui or "NONE"
-	local sp = table.sp and table.sp or "NONE"
+-- Extend non-current window highlighting
+function M.apply_nc_highlighting()
+  local set_unhighlighted = function()
+    vim.api.nvim_win_set_option(0, "winhighlight", "SignColumn:SignColumnNC,EndOfBuffer:EndOfBufferNC")
+    opt.cursorline = false
+  end
 
-	local cmd = "highlight " .. group .. " guifg=" .. fg .. " guibg=" .. bg .. " gui=" .. gui .. " guisp=" .. sp
-	vim.cmd(cmd)
+  local set_highlighted = function()
+    vim.api.nvim_win_set_option(0, "winhighlight", "SignColumn:SignColumn,EndOfBuffer:EndOfBuffer")
+    opt.cursorline = true
+  end
+
+  vim.api.nvim_create_augroup("mosel", {
+    clear = false
+  })
+
+  create_autocmd("WinLeave", {
+    group = "mosel",
+    pattern = { "*" },
+    callback = set_unhighlighted
+  })
+
+  create_autocmd("WinEnter", {
+    group = "mosel",
+    pattern = { "*" },
+    callback = set_highlighted
+  })
 end
 
 return M
