@@ -104,9 +104,12 @@ M.groups = {
   ["@label"]                        = { fg = c.blue },
   ["@float"]                        = { link = "Float" },
   ["@text.todo"]                    = { link = "Todo" },
+  -- markup languages (html, jsx, etc.)
+  ["@tag.attribute"]                = { fg = c.blue_tint_1 },
+  -- lsp semantic highlighting
+  ["@lsp.type.property"]            = { link = "@property" },
   -- typescriptreact
   ["@constructor.tsx"]              = { link = "Type" },
-  ["@tag.delimiter.tsx"]            = { fg = c.fg },
   -- elixir
   ["@symbol.elixir"]                = { fg = c.blue_tint_1 },
   ["@float.elixir"]                 = { fg = c.pink },
