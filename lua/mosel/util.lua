@@ -10,12 +10,14 @@ end
 -- Extend non-current window highlighting
 function M.apply_nc_highlighting()
   local set_unhighlighted = function()
-    vim.api.nvim_win_set_option(0, "winhighlight", "SignColumn:SignColumnNC,EndOfBuffer:EndOfBufferNC")
+    vim.api.nvim_win_set_option(0, "winhighlight",
+      "SignColumn:SignColumnNC,EndOfBuffer:EndOfBufferNC,ColorColumn:ColorColumnNC")
     opt.cursorline = false
   end
 
   local set_highlighted = function()
-    vim.api.nvim_win_set_option(0, "winhighlight", "SignColumn:SignColumn,EndOfBuffer:EndOfBuffer")
+    vim.api.nvim_win_set_option(0, "winhighlight",
+      "SignColumn:SignColumn,EndOfBuffer:EndOfBuffer,ColorColumn:ColorColumn")
     opt.cursorline = true
   end
 

@@ -17,8 +17,6 @@ M.colors = {
   yellow = "#F5DD73",
   beige = "#d3b987",
   pink = "#FF99C9",
-  orange = "#F5CC73",
-  orange2 = "#E5A110",
 }
 
 return M

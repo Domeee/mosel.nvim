@@ -4,6 +4,8 @@ local c = colors.colors
 local M = {}
 
 M.groups = {
+  ColorColumn                       = { bg = c.bg_tint_2 },                            -- used for the columns set with 'colorcolumn'
+  ColorColumnNC                     = { bg = c.bg_tint_1 },                            -- used for the columns set with 'colorcolumn'
   Conceal                           = { fg = c.fg },                                   -- placeholder characters substituted for concealed
   Cursor                            = { fg = c.bg, bg = c.fg },                        -- character under the cursor
   lCursor                           = { fg = c.bg, bg = c.fg },                        -- the character under the cursor when |language-mapping| is used (see 'guicursor')
@@ -34,7 +36,7 @@ M.groups = {
   NormalFloat                       = { fg = c.white, bg = c.bg_tint_4 },              --	Normal text in floating windows.
   WinSeparator                      = { fg = c.bg },
   Pmenu                             = { fg = c.white, bg = c.bg_tint_2 },              --Popup menu: normal item.
-  PmenuSel                          = { fg = c.bg, bg = c.pink, bold = true },         -- Popup menu: selected item.
+  PmenuSel                          = { fg = c.bg, bg = c.yellow, bold = true },       -- Popup menu: selected item.
   PmenuSbar                         = { bg = c.fg_shade_1 },                           -- Popup menu: scrollbar.
   PmenuThumb                        = { bg = c.fg },                                   -- Popup menu: Thumb of the scrollbar.
   Question                          = { fg = c.fg },                                   -- |hit-enter| prompt and yes/no questions
@@ -88,7 +90,7 @@ M.groups = {
   Italic                            = { italic = true },
   Ignore                            = {},                                        -- (preferred) left blank, hidden  |hl-Ignore|
   Error                             = { bg = c.red, fg = c.white, bold = true }, -- (preferred) any erroneous construct
-  Todo                              = { bg = c.pink, fg = c.bg, bold = true },   -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
+  Todo                              = { bg = c.yellow, fg = c.bg, bold = true }, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
   -- https://neovim.io/doc/user/treesitter.html#treesitter-highlight-groups
   ["@constant"]                     = { link = "Constant" },
   ["@type"]                         = { link = "Type" },
@@ -98,14 +100,15 @@ M.groups = {
   ["@variable"]                     = { link = "Identifier" },
   ["@variable.builtin"]             = { link = "Identifier" },
   ["@property"]                     = { fg = c.blue_tint_1 },
-  ["@field"]                        = { fg = c.blue_tint_1 },
+  ["@field"]                        = { link = "@property" },
   ["@punctuation.delimiter"]        = { fg = c.fg },
   ["@constructor"]                  = { link = "Type" },
   ["@label"]                        = { fg = c.blue },
   ["@float"]                        = { link = "Float" },
   ["@text.todo"]                    = { link = "Todo" },
   -- markup languages (html, jsx, etc.)
-  ["@tag.attribute"]                = { fg = c.blue_tint_1 },
+  ["@tag.attribute"]                = { link = "@property" },
+  htmlBold                          = { fg = c.white, bold = true },
   -- lsp semantic highlighting
   ["@lsp.type.property"]            = { link = "@property" },
   -- typescriptreact
@@ -118,16 +121,15 @@ M.groups = {
   -- markdown
   ["@text.literal.markdown_inline"] = { fg = c.beige },
   ["@text.strong.markdown_inline"]  = { fg = c.white, bold = true },
-  htmlBold                          = { fg = c.white, bold = true },
   -- Used as the base highlight group. Other Diagnostic highlights link to this by default
   DiagnosticError                   = { fg = c.red },
-  DiagnosticWarn                    = { fg = c.orange },
+  DiagnosticWarn                    = { fg = c.yellow },
   DiagnosticInfo                    = { fg = c.green },
   DiagnosticHint                    = { fg = c.white },
-  DiagnosticUnderlineError          = { underline = true, sp = c.red },     -- Used to underline "Error" diagnostics
-  DiagnosticUnderlineWarn           = { underline = true, sp = c.orange2 }, -- Used to underline "Warning" diagnostics
-  DiagnosticUnderlineInfo           = { underline = true, sp = c.green },   -- Used to underline "Information" diagnostics
-  DiagnosticUnderlineHint           = { underline = true, sp = c.white },   -- Used to underline "Hint" diagnostics
+  DiagnosticUnderlineError          = { underline = true, sp = c.red },    -- Used to underline "Error" diagnostics
+  DiagnosticUnderlineWarn           = { underline = true, sp = c.yellow }, -- Used to underline "Warning" diagnostics
+  DiagnosticUnderlineInfo           = { underline = true, sp = c.green },  -- Used to underline "Information" diagnostics
+  DiagnosticUnderlineHint           = { underline = true, sp = c.white },  -- Used to underline "Hint" diagnostics
   -- Statusline
   diffAdded                         = { fg = c.green },
   diffRemoved                       = { fg = c.red },
@@ -168,7 +170,7 @@ M.groups = {
   DapBreakpointText                 = { fg = c.blue },
   DapBreakpointLine                 = {},
   DapBreakpointNumber               = {},
-  DapBreakpointConditionText        = { fg = c.pink },
+  DapBreakpointConditionText        = { fg = c.yellow },
   DapBreakpointConditionLine        = {},
   DapBreakpointConditionNumber      = {},
   DapBreakpointRejectedText         = { fg = c.red },
@@ -185,7 +187,7 @@ M.groups = {
   DapUIVariable                     = { link = "Identifier" },
   DapUIScope                        = { fg = c.fg },
   DapUIType                         = { link = "Type" },
-  DapUIValue                        = { fg = c.pink },
+  DapUIValue                        = { fg = c.yellow },
   DapUIModifiedValue                = { fg = c.green, bold = true }, -- Inside scopes
   DapUIDecoration                   = { fg = c.fg },
   DapUIThread                       = {},
