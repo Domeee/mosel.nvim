@@ -34,6 +34,8 @@ M.groups = {
   Normal                            = { fg = c.fg, bg = c.bg },                        -- normal text
   NormalNC                          = { fg = c.fg, bg = c.bg_tint_1 },                 -- normal text in non-current windows
   NormalFloat                       = { fg = c.white, bg = c.bg_tint_4 },              --	Normal text in floating windows.
+  FloatBorder                       = { fg = c.blue_tint_1, bg = c.bg },               --	Borders in floating windows.
+  FloatTitle                        = { fg = c.blue, bg = c.bg },                      --	Title in floating windows.
   WinSeparator                      = { fg = c.bg },
   Pmenu                             = { fg = c.white, bg = c.bg_tint_2 },              --Popup menu: normal item.
   PmenuSel                          = { fg = c.bg, bg = c.yellow, bold = true },       -- Popup menu: selected item.
