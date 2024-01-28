@@ -109,6 +109,7 @@ M.groups = {
   ["@label"]                         = { fg = c.blue },
   ["@number.float"]                  = { link = "Float" },
   ["@comment.todo"]                  = { link = "Todo" },
+  ["@string.special.url.comment"]    = { fg = c.fg_shade_1, underline = true },
   -- markup languages (html, jsx, etc.)
   ["@tag.attribute"]                 = { link = "@property" },
   htmlBold                           = { fg = c.white, bold = true },
