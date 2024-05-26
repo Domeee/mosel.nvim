@@ -4,6 +4,7 @@ local c = colors.colors
 local M = {}
 
 M.groups = {
+  -- :h highlight-groups
   ColorColumn                           = { bg = c.bg_tint_2 },                            -- used for the columns set with 'colorcolumn'
   ColorColumnNC                         = { bg = c.bg_tint_1 },                            -- used for the columns set with 'colorcolumn'
   Conceal                               = { fg = c.fg },                                   -- placeholder characters substituted for concealed
@@ -94,6 +95,11 @@ M.groups = {
   Ignore                                = {},                                        -- (preferred) left blank, hidden  |hl-Ignore|
   Error                                 = { bg = c.red, fg = c.white, bold = true }, -- (preferred) any erroneous construct
   Todo                                  = { bg = c.yellow, fg = c.bg, bold = true }, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
+  QuickFixLine                          = { fg = c.white, bold = true },             -- Current quickfix item in the quickfix window. Combined with hl-CursorLine when the cursor is there.
+  SpellBad                              = { underline = true, sp = c.red },
+  SpellCap                              = { underline = true, sp = c.yellow },
+  SpellRare                             = { underline = true, sp = c.blue },
+  SpellLocal                            = { underline = true, sp = c.red },
   -- https://neovim.io/doc/user/treesitter.html#treesitter-highlight-groups
   -- https://github.com/nvim-treesitter/nvim-treesitter/blob/master/CONTRIBUTING.md#highlights
   ["@constant"]                         = { link = "Constant" },
