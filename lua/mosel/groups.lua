@@ -115,7 +115,10 @@ M.groups = {
   ["@constructor"]                      = { link = "Type" },
   ["@label"]                            = { fg = c.blue },
   ["@number.float"]                     = { link = "Float" },
+  ["@comment.error"]                    = { link = "Error" },
+  ["@comment.warning"]                  = { link = "Todo" },
   ["@comment.todo"]                     = { link = "Todo" },
+  ["@comment.note"]                     = { link = "Comment" },
   ["@string.special.url.comment"]       = { fg = c.fg_shade_1, underline = true },
   -- lsp semantic highlighting
   ["@lsp.type.property"]                = { link = "@property" },
